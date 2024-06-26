@@ -9,6 +9,10 @@ export class CalculatorComponent {
     expression:string = '';
     result:string = '';
 
+    onChange(event:any) {
+      this.expression = event.target.value;
+    }
+
     goBack() {
       this.expression = this.expression.substring(0,this.expression.length-1)
     }

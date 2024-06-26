@@ -1,10 +1,18 @@
+
+<div class="calc-header">
+    <h1>Simple Calculator</h1>
+</div>
+
 <div class="calculator">
     <div class="calc-screen">
-        <input ngModel=expression  class="screen" value="{{expression}}"/>
+        <input class="screen" value="{{expression}}" (change)="onChange($event)"/>
     </div>
     <div class="qol-features">
         <p class="result-txt">Result: {{result}}</p>
-        <button class="delete-btn" (click)="goBack()">Backspace</button>
+        <div class="qol-btn-container">
+            <button class="clear-btn" (click)="clear()">C</button>
+            <button class="delete-btn" (click)="goBack()">Backspace</button>
+        </div>
     </div>
     <div class="numbers-operators-pad">
         <button class="number-btn" (click)="insertText('7')">7</button>
@@ -19,7 +27,7 @@
         <button class="number-btn" (click)="insertText('2')">2</button>
         <button class="number-btn" (click)="insertText('3')">3</button>
         <button class="operator-btn" (click)="insertText(' / ')">/</button>
-        <button class="operator-btn" (click)="clear()">C</button>
+        <button class="operator-btn" (click)="insertText(' * ')">*</button>
         <button class="number-btn" (click)="insertText('0')">0</button>
         <button class="operator-btn" (click)="insertText(' % ')">%</button>
         <button class="equal-btn" (click)="calculate()">=</button>
