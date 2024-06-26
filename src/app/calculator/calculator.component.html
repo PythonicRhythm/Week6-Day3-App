@@ -1,0 +1,27 @@
+<div class="calculator">
+    <div class="calc-screen">
+        <input ngModel=expression  class="screen" value="{{expression}}"/>
+    </div>
+    <div class="qol-features">
+        <p class="result-txt">Result: {{result}}</p>
+        <button class="delete-btn" (click)="goBack()">Backspace</button>
+    </div>
+    <div class="numbers-operators-pad">
+        <button class="number-btn" (click)="insertText('7')">7</button>
+        <button class="number-btn" (click)="insertText('8')">8</button>
+        <button class="number-btn" (click)="insertText('9')">9</button>
+        <button class="operator-btn" (click)="insertText(' + ')">+</button>
+        <button class="number-btn" (click)="insertText('4')">4</button>
+        <button class="number-btn" (click)="insertText('5')">5</button>
+        <button class="number-btn" (click)="insertText('6')">6</button>
+        <button class="operator-btn" (click)="insertText(' - ')">-</button>
+        <button class="number-btn" (click)="insertText('1')">1</button>
+        <button class="number-btn" (click)="insertText('2')">2</button>
+        <button class="number-btn" (click)="insertText('3')">3</button>
+        <button class="operator-btn" (click)="insertText(' / ')">/</button>
+        <button class="operator-btn" (click)="clear()">C</button>
+        <button class="number-btn" (click)="insertText('0')">0</button>
+        <button class="operator-btn" (click)="insertText(' % ')">%</button>
+        <button class="equal-btn" (click)="calculate()">=</button>
+    </div>
+</div>

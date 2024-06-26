@@ -1,0 +1,117 @@
+.calculator {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(226, 215, 196);
+    width: 400px;
+    height: 650px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    overflow: hidden;
+}
+
+.calc-screen {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.61);
+    height: 20%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen {
+    width: 96%;
+    height: 96%;
+    color: white;
+    background: transparent;
+    border: none;
+    outline: none;
+    text-align: end;
+    font-size: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.575);
+    overflow: scroll;
+    scrollbar-width: thin;
+}
+
+.qol-features {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.61);
+    width: 100%;
+    height: 10%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.result-txt {
+    align-self: center;
+    color: rgb(247, 208, 81);
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0px;
+}
+
+.delete-btn {
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(49, 49, 49);
+    color: rgb(247, 208, 81);
+    font-weight: bold;
+    padding: 10px;
+}
+
+.delete-btn:hover {
+    background-color: rgb(59, 59, 59);
+}
+
+.delete-btn:active {
+    -webkit-transform: scale(1.1);
+}
+
+.numbers-operators-pad {
+    display: grid;
+    background-color: rgba(0, 0, 0, 0.61);
+    padding: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 70%;
+    gap: 12px;
+}
+
+.numbers-operators-pad > button {
+    border-radius: 10px;
+    font-size: 25px;
+    transition: ease 0.25s;
+}
+
+.number-btn {
+    font-weight: bold;
+    background-color: rgb(146, 124, 56);
+    color: white;
+}
+
+.number-btn:hover {
+    background-color: rgb(122, 104, 48);
+}
+
+.operator-btn {
+    font-weight: bold;
+    background-color: rgb(197, 160, 49);
+    color: white;
+}
+
+.operator-btn:hover {
+    background-color: rgb(161, 131, 38);
+}
+
+.equal-btn {
+    font-weight: bold;
+    background-color: rgb(165, 125, 4);
+    color: white;
+}
+
+.equal-btn:hover {
+    background-color: rgb(116, 88, 6);
+}
